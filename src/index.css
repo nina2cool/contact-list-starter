@@ -6,7 +6,8 @@ html, body, #root, .router {
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Zeyada', cursive;  font-size: 1.5em;
+  background-color: #ffffcc;
 }
 
 .App {
@@ -128,4 +129,8 @@ body {
 .new-contact-form input[type="submit"]:disabled {
   background: gray;
   color: white;
+}
+
+h1 {
+  color: darkblue;
 }
