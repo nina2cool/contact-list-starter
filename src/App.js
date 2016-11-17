@@ -61,16 +61,8 @@ class App extends Component {
           <div className="App" >
           <h1>Contact List</h1>
           < AddNewContact />
-          < SearchBar value={
-                this.state.searchText
-            }
-            onChange={
-                this.handleSearchBarChange.bind(this)
-            }
-            /> < ContactList contacts={
-                this.getFilteredContacts()
-            }
-            /></div>
+          < SearchBar value={this.state.searchText}
+            onChange={this.handleSearchBarChange.bind(this)}/> < ContactList contacts={this.getFilteredContacts()}/></div>
         );
     }
 
@@ -80,12 +72,12 @@ class App extends Component {
 
         //this is the place to put the ajax call so we can re-render the state
         // axios.get('https://limitless-bayou-36199.herokuapp.com/api/contacts')
-        axios.get('localhost:3001')
+        axios.get('http://localhost:3001/api/contacts')
         .then(resp => {
           this.setState({
             ...this.state,
             contacts: resp.data
-          });
+          })
         })
         .catch(err => console.log(`Error! ${err}`));
 

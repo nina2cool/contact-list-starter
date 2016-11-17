@@ -20,7 +20,7 @@ const ContactList = (props) => {
 }
 
 ContactList.propTypes = {
-  contacts: React.PropTypes.array.isRequired
+  ContactList: React.PropTypes.arrayOf(React.PropTypes.contact)
 }
 
 export default ContactList;
